@@ -9,23 +9,21 @@
 /* Begin PBXBuildFile section */
 		043CE76F269433AC00D1717A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CE76E269433AC00D1717A /* AppDelegate.swift */; };
 		043CE771269433AC00D1717A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CE770269433AC00D1717A /* SceneDelegate.swift */; };
-		043CE773269433AC00D1717A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CE772269433AC00D1717A /* ViewController.swift */; };
-		043CE776269433AC00D1717A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043CE774269433AC00D1717A /* Main.storyboard */; };
+		043CE773269433AC00D1717A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CE772269433AC00D1717A /* TaskViewController.swift */; };
 		043CE779269433AC00D1717A /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043CE777269433AC00D1717A /* CoreDataDemo.xcdatamodeld */; };
 		043CE77B269433AD00D1717A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043CE77A269433AD00D1717A /* Assets.xcassets */; };
-		043CE77E269433AD00D1717A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043CE77C269433AD00D1717A /* LaunchScreen.storyboard */; };
+		043CE786269443C100D1717A /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CE785269443C100D1717A /* NewTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		043CE76B269433AC00D1717A /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043CE76E269433AC00D1717A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043CE770269433AC00D1717A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043CE772269433AC00D1717A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		043CE775269433AC00D1717A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		043CE772269433AC00D1717A /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		043CE778269433AC00D1717A /* CoreDataDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDemo.xcdatamodel; sourceTree = "<group>"; };
 		043CE77A269433AD00D1717A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		043CE77D269433AD00D1717A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043CE77F269433AD00D1717A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043CE785269443C100D1717A /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +58,9 @@
 			children = (
 				043CE76E269433AC00D1717A /* AppDelegate.swift */,
 				043CE770269433AC00D1717A /* SceneDelegate.swift */,
-				043CE772269433AC00D1717A /* ViewController.swift */,
-				043CE774269433AC00D1717A /* Main.storyboard */,
+				043CE772269433AC00D1717A /* TaskViewController.swift */,
+				043CE785269443C100D1717A /* NewTaskViewController.swift */,
 				043CE77A269433AD00D1717A /* Assets.xcassets */,
-				043CE77C269433AD00D1717A /* LaunchScreen.storyboard */,
 				043CE77F269433AD00D1717A /* Info.plist */,
 				043CE777269433AC00D1717A /* CoreDataDemo.xcdatamodeld */,
 			);
@@ -127,9 +124,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043CE77E269433AD00D1717A /* LaunchScreen.storyboard in Resources */,
 				043CE77B269433AD00D1717A /* Assets.xcassets in Resources */,
-				043CE776269433AC00D1717A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +135,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043CE773269433AC00D1717A /* ViewController.swift in Sources */,
+				043CE786269443C100D1717A /* NewTaskViewController.swift in Sources */,
+				043CE773269433AC00D1717A /* TaskViewController.swift in Sources */,
 				043CE779269433AC00D1717A /* CoreDataDemo.xcdatamodeld in Sources */,
 				043CE76F269433AC00D1717A /* AppDelegate.swift in Sources */,
 				043CE771269433AC00D1717A /* SceneDelegate.swift in Sources */,
@@ -148,25 +144,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		043CE774269433AC00D1717A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				043CE775269433AC00D1717A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		043CE77C269433AD00D1717A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				043CE77D269433AD00D1717A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		043CE780269433AD00D1717A /* Debug */ = {
@@ -292,6 +269,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoreDataDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +288,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoreDataDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
