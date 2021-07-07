@@ -6,7 +6,9 @@
 //
 
 import UIKit
+
 final class NewTaskViewController:  UIViewController {
+   
     
     private lazy var textField: UITextField = {
         let textField = UITextField()
@@ -25,10 +27,7 @@ final class NewTaskViewController:  UIViewController {
         return button
     }()
     
-    @objc func saveTapped () {
-        dismiss(animated: true, completion: nil)
-    }
-    
+   
     
     private lazy var cancelButton: UIButton = {
         let button = UIButton()
@@ -39,11 +38,7 @@ final class NewTaskViewController:  UIViewController {
         button.addTarget(self, action: #selector(cancelTapped), for: .touchUpInside)
         return button
     }()
-    
-    @objc func cancelTapped () {
-        dismiss(animated: true, completion: nil)
-    }
-    
+  
   
     
     
@@ -52,7 +47,7 @@ final class NewTaskViewController:  UIViewController {
         view.backgroundColor = .secondarySystemBackground
         addSubviews(with: [textField, saveButton, cancelButton])
         setConstraints()
-        
+        textField.becomeFirstResponder()
         
     }
 }
@@ -64,6 +59,19 @@ extension NewTaskViewController {
             view.addSubview(item)
         }
     }
+    
+    
+    @objc func saveTapped () {
+        guard let text = textField.text else {return}
+        CoreDataManager.shared.saveTasks(text: text)
+        
+        dismiss(animated: true, completion: nil)
+       }
+       
+    @objc func cancelTapped () {
+        dismiss(animated: true, completion: nil)
+    }
+    
     //MARK: - Add Constraints
     private func setConstraints() {
         textField.translatesAutoresizingMaskIntoConstraints = false

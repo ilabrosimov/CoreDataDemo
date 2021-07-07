@@ -7,22 +7,41 @@
 
 import UIKit
 
+
 final  class TaskViewController: UITableViewController {
-    let cellIdentifier = "Cell"
+    
+    private let cellIdentifier = "Cell"
+    private var tasks: [Task] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         
-       setupNavigationBar()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        setupNavigationBar()
+        
+       fetchTasksAndReloadTable()
     }
+    override func viewWillAppear(_ animated: Bool) {
+       fetchTasksAndReloadTable()
+    }
+ 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tasks.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  =  tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.textLabel?.text = "# \(indexPath.row)"
+        cell.textLabel?.text = tasks[indexPath.row].title
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        CoreDataManager.shared.deleteTask(task: tasks[indexPath.row])
+        fetchTasksAndReloadTable()
+      
     }
     
     private func  setupNavigationBar() {
@@ -44,6 +63,12 @@ final  class TaskViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTask))
         navigationController?.navigationBar.tintColor = .white
         
+    }
+    private func fetchTasksAndReloadTable() {
+        CoreDataManager.shared.fetchTasks {tasks in
+            self.tasks = tasks
+        }
+        tableView.reloadData()
     }
     
     @objc func addTask () {

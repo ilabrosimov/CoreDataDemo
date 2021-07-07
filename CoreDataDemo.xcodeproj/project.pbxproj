@@ -13,6 +13,7 @@
 		043CE779269433AC00D1717A /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043CE777269433AC00D1717A /* CoreDataDemo.xcdatamodeld */; };
 		043CE77B269433AD00D1717A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043CE77A269433AD00D1717A /* Assets.xcassets */; };
 		043CE786269443C100D1717A /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CE785269443C100D1717A /* NewTaskViewController.swift */; };
+		04FF585D2695EE9E0086302B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF585C2695EE9E0086302B /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		043CE77A269433AD00D1717A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043CE77F269433AD00D1717A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043CE785269443C100D1717A /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		04FF585C2695EE9E0086302B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				043CE76E269433AC00D1717A /* AppDelegate.swift */,
+				04FF585C2695EE9E0086302B /* CoreDataManager.swift */,
 				043CE770269433AC00D1717A /* SceneDelegate.swift */,
 				043CE772269433AC00D1717A /* TaskViewController.swift */,
 				043CE785269443C100D1717A /* NewTaskViewController.swift */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FF585D2695EE9E0086302B /* CoreDataManager.swift in Sources */,
 				043CE786269443C100D1717A /* NewTaskViewController.swift in Sources */,
 				043CE773269433AC00D1717A /* TaskViewController.swift in Sources */,
 				043CE779269433AC00D1717A /* CoreDataDemo.xcdatamodeld in Sources */,
