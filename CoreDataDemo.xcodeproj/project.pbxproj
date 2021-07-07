@@ -58,16 +58,40 @@
 		043CE76D269433AC00D1717A /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
-				043CE76E269433AC00D1717A /* AppDelegate.swift */,
+				04FF585F26961BFF0086302B /* Supporting files */,
+				04FF585E26961BDF0086302B /* Services */,
+				04FF586026961C120086302B /* View Controllers */,
+			);
+			path = CoreDataDemo;
+			sourceTree = "<group>";
+		};
+		04FF585E26961BDF0086302B /* Services */ = {
+			isa = PBXGroup;
+			children = (
 				04FF585C2695EE9E0086302B /* CoreDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		04FF585F26961BFF0086302B /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				043CE76E269433AC00D1717A /* AppDelegate.swift */,
 				043CE770269433AC00D1717A /* SceneDelegate.swift */,
-				043CE772269433AC00D1717A /* TaskViewController.swift */,
-				043CE785269443C100D1717A /* NewTaskViewController.swift */,
 				043CE77A269433AD00D1717A /* Assets.xcassets */,
 				043CE77F269433AD00D1717A /* Info.plist */,
 				043CE777269433AC00D1717A /* CoreDataDemo.xcdatamodeld */,
 			);
-			path = CoreDataDemo;
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		04FF586026961C120086302B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				043CE772269433AC00D1717A /* TaskViewController.swift */,
+				043CE785269443C100D1717A /* NewTaskViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoreDataDemo/Info.plist;
+				INFOPLIST_FILE = "CoreDataDemo/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,7 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoreDataDemo/Info.plist;
+				INFOPLIST_FILE = "CoreDataDemo/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

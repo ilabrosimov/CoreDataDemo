@@ -61,16 +61,7 @@ extension NewTaskViewController {
     }
     
     
-    @objc func saveTapped () {
-        guard let text = textField.text else {return}
-        CoreDataManager.shared.saveTasks(text: text)
-        
-        dismiss(animated: true, completion: nil)
-       }
-       
-    @objc func cancelTapped () {
-        dismiss(animated: true, completion: nil)
-    }
+   
     
     //MARK: - Add Constraints
     private func setConstraints() {
@@ -94,4 +85,14 @@ extension NewTaskViewController {
         ])
     }
   
+    @objc func saveTapped () {
+        guard let text = textField.text else {return}
+        CoreDataManager.shared.saveTasks(text: text)
+        
+        dismiss(animated: true, completion: nil)
+       }
+       
+    @objc func cancelTapped () {
+        dismiss(animated: true, completion: nil)
+    }
 }

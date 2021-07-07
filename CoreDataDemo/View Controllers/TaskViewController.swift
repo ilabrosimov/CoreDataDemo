@@ -40,7 +40,8 @@ final  class TaskViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         CoreDataManager.shared.deleteTask(task: tasks[indexPath.row])
-        fetchTasksAndReloadTable()
+        tasks.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
       
     }
     
