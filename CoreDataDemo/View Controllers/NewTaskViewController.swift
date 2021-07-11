@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NewTaskViewController:  UIViewController {
+final class NewTaskViewController:  UIViewController, UITextFieldDelegate {
    
     
     private lazy var textField: UITextField = {
@@ -48,6 +48,7 @@ final class NewTaskViewController:  UIViewController {
         addSubviews(with: [textField, saveButton, cancelButton])
         setConstraints()
         textField.becomeFirstResponder()
+        textField.delegate = self
         
     }
 }
@@ -62,7 +63,11 @@ extension NewTaskViewController {
     
     
    
-    
+    //MARK: - TextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        saveTapped()
+        return true
+    }
     //MARK: - Add Constraints
     private func setConstraints() {
         textField.translatesAutoresizingMaskIntoConstraints = false

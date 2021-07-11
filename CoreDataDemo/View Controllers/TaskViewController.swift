@@ -11,7 +11,7 @@ import UIKit
 final  class TaskViewController: UITableViewController {
     
     private let cellIdentifier = "Cell"
-    private var tasks: [Task] = []
+    private var tasks: [Task] = CoreDataManager.shared.fetchTasks()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +19,11 @@ final  class TaskViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         setupNavigationBar()
         
-       fetchTasksAndReloadTable()
+       
     }
     override func viewWillAppear(_ animated: Bool) {
-       fetchTasksAndReloadTable()
+      tasks = CoreDataManager.shared.fetchTasks()
+        tableView.reloadData()
     }
  
     
@@ -65,12 +66,7 @@ final  class TaskViewController: UITableViewController {
         navigationController?.navigationBar.tintColor = .white
         
     }
-    private func fetchTasksAndReloadTable() {
-        CoreDataManager.shared.fetchTasks {tasks in
-            self.tasks = tasks
-        }
-        tableView.reloadData()
-    }
+    
     
     @objc func addTask () {
         let newTaskController = NewTaskViewController()

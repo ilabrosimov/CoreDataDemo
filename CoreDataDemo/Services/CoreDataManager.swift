@@ -13,19 +13,19 @@ class CoreDataManager {
         
     }
     
-    func fetchTasks (complition: @escaping ([Task])->()) {
+    func fetchTasks  () -> [Task] {
         
-        guard let viewContext = getViewContext() else {return}
+        guard let viewContext = getViewContext() else {return [Task]() }
         
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
         do {
             let tasks = try viewContext.fetch(fetchRequest)
-            complition(tasks)
+            return tasks
             
         } catch let error {
             print(error)
         }
-        
+        return [Task]()
     }
     
     func saveTasks (text: String) {
